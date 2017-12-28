@@ -13,6 +13,9 @@
 		382F83FE1FF2222F00BA363E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 382F83FD1FF2222F00BA363E /* Assets.xcassets */; };
 		382F84011FF2222F00BA363E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 382F83FF1FF2222F00BA363E /* LaunchScreen.storyboard */; };
 		382F840C1FF2222F00BA363E /* Unnamed_New_ProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 382F840B1FF2222F00BA363E /* Unnamed_New_ProjectTests.swift */; };
+		3857EBB01FF4CE7A001DE825 /* SQLite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3857EBAE1FF4CE3B001DE825 /* SQLite.framework */; };
+		3857EBB11FF4CE7A001DE825 /* SQLite.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3857EBAE1FF4CE3B001DE825 /* SQLite.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		38FE56F51FF40E4B00824CD8 /* DatabaseFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38FE56F41FF40E4B00824CD8 /* DatabaseFunctions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -25,6 +28,20 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		3857EBB21FF4CE7A001DE825 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				3857EBB11FF4CE7A001DE825 /* SQLite.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		382F83F31FF2222F00BA363E /* Unnamed-New-Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Unnamed-New-Project.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		382F83F61FF2222F00BA363E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -36,6 +53,8 @@
 		382F84071FF2222F00BA363E /* Unnamed-New-ProjectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Unnamed-New-ProjectTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		382F840B1FF2222F00BA363E /* Unnamed_New_ProjectTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Unnamed_New_ProjectTests.swift; sourceTree = "<group>"; };
 		382F840D1FF2222F00BA363E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3857EBAE1FF4CE3B001DE825 /* SQLite.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SQLite.framework; path = Carthage/Build/iOS/SQLite.framework; sourceTree = "<group>"; };
+		38FE56F41FF40E4B00824CD8 /* DatabaseFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseFunctions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3857EBB01FF4CE7A001DE825 /* SQLite.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,6 +82,7 @@
 				382F83F51FF2222F00BA363E /* Unnamed-New-Project */,
 				382F840A1FF2222F00BA363E /* Unnamed-New-ProjectTests */,
 				382F83F41FF2222F00BA363E /* Products */,
+				3857EBAD1FF4CE3B001DE825 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -77,9 +98,10 @@
 		382F83F51FF2222F00BA363E /* Unnamed-New-Project */ = {
 			isa = PBXGroup;
 			children = (
-				382F83F61FF2222F00BA363E /* AppDelegate.swift */,
-				382F83F81FF2222F00BA363E /* ViewController.swift */,
 				382F83FA1FF2222F00BA363E /* Main.storyboard */,
+				382F841D1FF226BC00BA363E /* Models */,
+				3857EBB51FF4D628001DE825 /* Views */,
+				3857EBB61FF4D640001DE825 /* Controllers */,
 				382F83FD1FF2222F00BA363E /* Assets.xcassets */,
 				382F83FF1FF2222F00BA363E /* LaunchScreen.storyboard */,
 				382F84021FF2222F00BA363E /* Info.plist */,
@@ -96,6 +118,38 @@
 			path = "Unnamed-New-ProjectTests";
 			sourceTree = "<group>";
 		};
+		382F841D1FF226BC00BA363E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				38FE56F41FF40E4B00824CD8 /* DatabaseFunctions.swift */,
+				382F83F61FF2222F00BA363E /* AppDelegate.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		3857EBAD1FF4CE3B001DE825 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3857EBAE1FF4CE3B001DE825 /* SQLite.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3857EBB51FF4D628001DE825 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		3857EBB61FF4D640001DE825 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				382F83F81FF2222F00BA363E /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -106,6 +160,7 @@
 				382F83EF1FF2222F00BA363E /* Sources */,
 				382F83F01FF2222F00BA363E /* Frameworks */,
 				382F83F11FF2222F00BA363E /* Resources */,
+				3857EBB21FF4CE7A001DE825 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -200,6 +255,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				382F83F91FF2222F00BA363E /* ViewController.swift in Sources */,
+				38FE56F51FF40E4B00824CD8 /* DatabaseFunctions.swift in Sources */,
 				382F83F71FF2222F00BA363E /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -354,10 +410,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "Unnamed-New-Project/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.aanyajhaveri.Unnamed-New-Project";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -368,10 +429,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "Unnamed-New-Project/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.aanyajhaveri.Unnamed-New-Project";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

@@ -15,6 +15,10 @@ class ViewController: UIViewController, UITextFieldDelegate {
         createNewTable(connection: connection)
     }
     
+    @IBOutlet weak var dataDisplay: UICollectionView!
+    
+    @IBOutlet weak var dataCell: UICollectionViewCell!
+    
     @IBOutlet weak var itemDescription: UITextField!
     
     @IBAction func insertRow(_ sender: Any) {
